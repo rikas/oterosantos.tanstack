@@ -43,3 +43,36 @@ body {
 body {
   margin: 0;
 }
+
+/* Page transitions via the View Transitions API (see src/router.tsx).
+   Browsers without support (eg. Firefox) simply skip this and navigate
+   instantly — no fallback needed. */
+::view-transition-old(root) {
+  animation: 180ms ease-in both tss-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 220ms ease-out both tss-fade-in;
+}
+
+@keyframes tss-fade-out {
+  to {
+    opacity: 0;
+    /* transform: translateY(-20px); */
+  }
+}
+
+@keyframes tss-fade-in {
+  from {
+    opacity: 0;
+    /* transform: translateY(20px); */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
