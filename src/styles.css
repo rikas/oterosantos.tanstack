@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-900: #050708;
+  --color-dark-800: #0e1116;
+  --color-dark-700: #171b21;
+  --color-github: #181717;
+  --color-twitter: #1da1f2;
+  --color-linkedin: #0077b5;
+
+  --font-wotfard: 'Wotfard', 'Wotfard-fallback', sans-serif;
+}
+
+@font-face {
+  font-family: 'Wotfard-fallback';
+  src: local(Verdana);
+  size-adjust: 90%;
+  ascent-override: 93%;
+  descent-override: 18%;
+  line-gap-override: normal;
+}
+
+@font-face {
+  font-family: 'Wotfard';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/wotfard-regular-webfont.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
