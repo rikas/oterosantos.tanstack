@@ -26,6 +26,10 @@ File-based routes live in `src/routes/`. `src/routes/_sidebar_layout.tsx` is a p
 
 `GITHUB_TOKEN` (used in `src/lib/github.ts` via Octokit) must be set in `.env` (git-ignored, not committed). Without it, GitHub API calls used by project/user-detail components will fail or rate-limit.
 
+## Deploy (Netlify)
+
+`pnpm build` with no preset set produces the default `node-server` Nitro preset, outputting to `.output/` — this does NOT match what Netlify expects and fails with "Deploy directory 'dist/client' does not exist". `netlify.toml` forces `NITRO_PRESET=netlify`, which makes Nitro output static assets to `dist/` and the function to `.netlify/functions-internal/` (the layout Netlify's Frameworks API auto-detects). If deploy settings ever get reset/overridden in the Netlify UI, publish dir must stay `dist` and `NITRO_PRESET=netlify` must stay set — don't let Netlify's zero-config auto-detection override this.
+
 ## Conventions
 
 - Path alias `@/*` maps to `./src/*` (see `tsconfig.json` and `package.json#imports`).
