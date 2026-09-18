@@ -3,7 +3,7 @@
     "title": "Megadrive Collection",
     "website": "https://md.oterosantos.com/",
     "githubRepo": "md.oterosantos",
-    "description": "I'm an avid retrogame collector, specially SEGA games from the 90s. This small project is something that I use to learn new technologies once in a while. The first version was a Vue frontend with a Rails API but at this point it's a Tanstack Start app with Prisma",
+    "description": "I'm an avid retro game collector, especially SEGA titles from the 90s. This is a small project I use to learn new technologies once in a while. The first version was a Vue frontend with a Rails API, but these days it's a TanStack Start app with Prisma.",
     "image": {
       "src": "/projects/md.oterosantos.jpg",
       "alt": "Screenshot of megadrive collection"
@@ -14,7 +14,7 @@
     "title": "oterosantos.com",
     "website": "https://oterosantos.com/",
     "githubRepo": "oterosantos.com",
-    "description": "This very website that you are looking at right now. I built it with Tanstack Start and TailwindCSS, and it's hosted on Netlify.",
+    "description": "This is the very website you're looking at right now. I built it with TanStack Start and Tailwind CSS, and it's hosted on Netlify.",
     "image": {
       "src": "/projects/oterosantos.jpg",
       "alt": "Screenshot of oterosantos.com"

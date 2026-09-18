@@ -1,6 +1,6 @@
-import { InvaderIcon } from '../icons'
-import DarkmodeToggle from './DarkmodeToggle'
-import { Stack, StyledLink } from '@/components/atoms'
+import { InvaderIcon } from '../icons';
+import DarkmodeToggle from './DarkmodeToggle';
+import { Stack, StyledLink } from '@/components/atoms';
 
 // className="fill-zinc-400 transition group-hover:rotate-12 group-hover:fill-zinc-300"
 
@@ -8,12 +8,7 @@ export function Navbar(): React.ReactElement {
   return (
     <nav className="flex items-center py-4 pl-10 pr-6">
       <StyledLink variant="nav" href="/" className="font-extrabold text-xl">
-        <Stack
-          direction="row"
-          gap={1}
-          render={<span />}
-          className="items-center group"
-        >
+        <Stack direction="row" gap={1} render={<span />} className="items-center group">
           <InvaderIcon className="fill-emerald-500 dark:fill-emerald-300 transition group-hover:-rotate-12" />
           Ricardo Otero
         </Stack>
@@ -36,5 +31,5 @@ export function Navbar(): React.ReactElement {
         <DarkmodeToggle />
       </div>
     </nav>
-  )
+  );
 }

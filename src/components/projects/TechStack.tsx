@@ -1,14 +1,7 @@
-import { ExternalLink, Stack } from '../atoms'
+import { ExternalLink, Stack } from '../atoms';
 
 export type Tech =
-  | 'React'
-  | 'Vite'
-  | 'TailwindCSS'
-  | 'Rails'
-  | 'Postgres'
-  | 'Material UI'
-  | 'Prisma'
-  | 'Tanstack'
+  'React' | 'Vite' | 'TailwindCSS' | 'Rails' | 'Postgres' | 'Material UI' | 'Prisma' | 'Tanstack';
 
 const TechLinks: Record<Tech, string> = {
   React: 'https://reactjs.org/',
@@ -19,11 +12,11 @@ const TechLinks: Record<Tech, string> = {
   'Material UI': 'https://mui.com/',
   Prisma: 'https://www.prisma.io/',
   Tanstack: 'https://tanstack.com/',
-}
+};
 
 type Props = {
-  techs: Tech[]
-}
+  techs: Tech[];
+};
 
 export function TechStack({ techs }: Props): React.ReactElement {
   return (
@@ -41,5 +34,5 @@ export function TechStack({ techs }: Props): React.ReactElement {
         ))}
       </Stack>
     </Stack>
-  )
+  );
 }

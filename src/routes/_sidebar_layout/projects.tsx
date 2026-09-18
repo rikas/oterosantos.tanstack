@@ -27,8 +27,9 @@ function RouteComponent(): React.ReactElement {
     <Article>
       <Title>My projects</Title>
       <p>
-        Most of the time I work on private projects related to a variety of products, but once in a
-        while I find the motivation and time to work on pet projects or OSS, mainly on Github.
+        Most of the time I work on private projects for a variety of products, but every once in a
+        while I find the time and motivation to work on side projects or open source, mostly on
+        GitHub.
       </p>
 
       {projects.map((project) => (

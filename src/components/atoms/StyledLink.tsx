@@ -1,7 +1,7 @@
-import { Link } from '@tanstack/react-router'
-import { twJoin } from 'tailwind-merge'
-import { tv } from 'tailwind-variants'
-import type { VariantProps } from 'tailwind-variants'
+import { Link } from '@tanstack/react-router';
+import { twJoin } from 'tailwind-merge';
+import { tv } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 
 export const linkVariants = tv({
   base: 'text-sky-600 hover:text-sky-400 dark:text-sky-400 hover:dark:text-sky-600',
@@ -16,10 +16,9 @@ export const linkVariants = tv({
       gray: 'text-black/50 hover:text-black/60 dark:text-white/50 dark:hover:text-white/40',
     },
   },
-})
+});
 
-export type StyledLinkProps = VariantProps<typeof linkVariants> &
-  React.ComponentProps<'a'>
+export type StyledLinkProps = VariantProps<typeof linkVariants> & React.ComponentProps<'a'>;
 
 export function StyledLink({
   href,
@@ -28,27 +27,19 @@ export function StyledLink({
   children,
   ...otherProps
 }: StyledLinkProps): React.ReactElement {
-  const isExternal = href && /^https?:\/\//.test(href)
+  const isExternal = href && /^https?:\/\//.test(href);
 
   if (isExternal) {
     return (
-      <a
-        href={href}
-        className={linkVariants({ variant, className })}
-        {...otherProps}
-      >
+      <a href={href} className={linkVariants({ variant, className })} {...otherProps}>
         {children}
       </a>
-    )
+    );
   }
 
   return (
-    <Link
-      to={href}
-      className={linkVariants({ variant, className })}
-      {...otherProps}
-    >
+    <Link to={href} className={linkVariants({ variant, className })} {...otherProps}>
       {children}
     </Link>
-  )
+  );
 }

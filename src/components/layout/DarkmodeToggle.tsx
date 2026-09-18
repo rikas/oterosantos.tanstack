@@ -1,18 +1,18 @@
-import { Moon, Sun } from 'lucide-react'
-import { ClientOnly } from '@tanstack/react-router'
-import { linkVariants } from '../atoms'
-import { useTheme } from './ThemeProvider'
+import { Moon, Sun } from 'lucide-react';
+import { ClientOnly } from '@tanstack/react-router';
+import { linkVariants } from '../atoms';
+import { useTheme } from './ThemeProvider';
 
 export default function DarkmodeToggle(): React.ReactElement {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
-  const isDarkMode = theme === 'dark'
+  const isDarkMode = theme === 'dark';
 
-  const description = `Activate ${isDarkMode ? 'light' : 'dark'} mode`
+  const description = `Activate ${isDarkMode ? 'light' : 'dark'} mode`;
 
   const changeTheme = () => {
-    theme === 'dark' ? setTheme('light') : setTheme('dark')
-  }
+    theme === 'dark' ? setTheme('light') : setTheme('dark');
+  };
 
   return (
     <ClientOnly>
@@ -33,5 +33,5 @@ export default function DarkmodeToggle(): React.ReactElement {
         )}
       </button>
     </ClientOnly>
-  )
+  );
 }

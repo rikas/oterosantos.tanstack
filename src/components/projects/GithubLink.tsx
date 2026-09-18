@@ -1,9 +1,9 @@
-import { ExternalLink, Stack } from '../atoms'
-import { GithubIcon } from '../icons'
+import { ExternalLink, Stack } from '../atoms';
+import { GithubIcon } from '../icons';
 
 type Props = {
-  repo: string
-}
+  repo: string;
+};
 
 export function GithubLink({ repo }: Props): React.ReactElement {
   return (
@@ -11,9 +11,7 @@ export function GithubLink({ repo }: Props): React.ReactElement {
       <span className="size-4 dark:fill-white">
         <GithubIcon />
       </span>
-      <ExternalLink href={`https://github.com/rikas/${repo}`}>
-        {repo}
-      </ExternalLink>
+      <ExternalLink href={`https://github.com/rikas/${repo}`}>{repo}</ExternalLink>
     </Stack>
-  )
+  );
 }

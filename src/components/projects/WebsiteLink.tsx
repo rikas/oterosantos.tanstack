@@ -1,9 +1,9 @@
-import { Link } from 'lucide-react'
-import { ExternalLink, Stack } from '../atoms'
+import { Link } from 'lucide-react';
+import { ExternalLink, Stack } from '../atoms';
 
 type Props = {
-  href: string
-}
+  href: string;
+};
 
 export function WebsiteLink({ href }: Props): React.ReactElement {
   return (
@@ -11,5 +11,5 @@ export function WebsiteLink({ href }: Props): React.ReactElement {
       <Link strokeWidth={1.6} className="size-4" />
       <ExternalLink href={href}>{href}</ExternalLink>
     </Stack>
-  )
+  );
 }

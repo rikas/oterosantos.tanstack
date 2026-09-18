@@ -1,19 +1,15 @@
-import { Divider, Stack, Subtitle } from '../atoms'
-import { GithubUserDetails, TopGitHubProjects } from '../projects'
-import { Sidebar } from './Sidebar'
-import type { GithubRepo, GithubUser } from '@/lib/github'
-import type { PropsWithChildren } from 'react'
+import { Divider, Stack, Subtitle } from '../atoms';
+import { GithubUserDetails, TopGitHubProjects } from '../projects';
+import { Sidebar } from './Sidebar';
+import type { GithubRepo, GithubUser } from '@/lib/github';
+import type { PropsWithChildren } from 'react';
 
 type Props = PropsWithChildren<{
-  user: GithubUser
-  repos: Array<GithubRepo>
-}>
+  user: GithubUser;
+  repos: Array<GithubRepo>;
+}>;
 
-export function SidebarLayout({
-  user,
-  repos,
-  children,
-}: Props): React.ReactElement {
+export function SidebarLayout({ user, repos, children }: Props): React.ReactElement {
   return (
     <>
       <main className="mx-auto p-10">{children}</main>
@@ -38,5 +34,5 @@ export function SidebarLayout({
         </Stack>
       </Sidebar>
     </>
-  )
+  );
 }

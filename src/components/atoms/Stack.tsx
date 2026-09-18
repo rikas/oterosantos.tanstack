@@ -1,7 +1,7 @@
-import { useRender } from '@base-ui/react/use-render'
-import { mergeProps } from '@base-ui/react/merge-props'
-import { tv } from 'tailwind-variants'
-import type { VariantProps } from 'tailwind-variants'
+import { useRender } from '@base-ui/react/use-render';
+import { mergeProps } from '@base-ui/react/merge-props';
+import { tv } from 'tailwind-variants';
+import type { VariantProps } from 'tailwind-variants';
 
 const stackVariants = tv({
   base: 'flex',
@@ -25,14 +25,14 @@ const stackVariants = tv({
     direction: 'col',
     gap: 0,
   },
-})
+});
 
 interface RenderProps extends useRender.ComponentProps<'div'> {
-  direction?: 'col' | 'row'
-  gap?: number
+  direction?: 'col' | 'row';
+  gap?: number;
 }
 
-type StackProps = RenderProps & VariantProps<typeof stackVariants>
+type StackProps = RenderProps & VariantProps<typeof stackVariants>;
 
 export function Stack({
   render,
@@ -48,7 +48,7 @@ export function Stack({
       { className: stackVariants({ gap, direction, className }) },
       otherProps,
     ),
-  })
+  });
 
-  return element
+  return element;
 }
