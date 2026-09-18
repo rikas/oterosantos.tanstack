@@ -1,5 +1,6 @@
-import { Divider, Stack, Subtitle } from '../atoms';
-import { GithubUserDetails, TopGitHubProjects } from '../projects';
+import { Stack } from '../atoms';
+import { GithubInfo } from './GithubInfo';
+import { MobileDrawer } from './MobileDrawer';
 import { Sidebar } from './Sidebar';
 import type { GithubRepo, GithubUser } from '@/lib/github';
 import type { PropsWithChildren } from 'react';
@@ -12,25 +13,14 @@ type Props = PropsWithChildren<{
 export function SidebarLayout({ user, repos, children }: Props): React.ReactElement {
   return (
     <>
-      <main className="mx-auto p-10">{children}</main>
+      <main className="mx-auto p-10 relative">
+        <MobileDrawer repos={repos} user={user} />
+        {children}
+      </main>
 
       <Sidebar>
         <Stack gap={10} id="github-information">
-          <Stack>
-            <Subtitle>Github profile</Subtitle>
-            <GithubUserDetails user={user} />
-          </Stack>
-
-          <Divider />
-
-          <Stack>
-            <Subtitle>Popular repos</Subtitle>
-            <TopGitHubProjects
-              repos={repos}
-              profileURL={user.html_url}
-              repoCount={user.public_repos}
-            />
-          </Stack>
+          <GithubInfo repos={repos} user={user} />
         </Stack>
       </Sidebar>
     </>

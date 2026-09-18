@@ -18,7 +18,13 @@ function RouteComponent() {
       <Title>About me</Title>
 
       <div className="relative">
-        <img src="/ricardo.jpg" alt="Ricardo Otero" className="w-full rounded-xl object-cover" />
+        <img
+          src="/ricardo.jpg"
+          alt="Ricardo Otero"
+          width={2648}
+          height={1346}
+          className="w-full rounded-xl object-cover"
+        />
 
         <div className="flex grow items-center justify-center absolute bottom-3 right-3">
           <ExternalLink

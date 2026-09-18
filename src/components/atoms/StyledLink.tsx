@@ -9,9 +9,9 @@ export const linkVariants = tv({
     variant: {
       null: '',
       nav: twJoin(
-        'text-zinc-800 hover:text-zinc-600 dark:text-yellow-100 hover:dark:text-yellow-300',
-        '[&.active]:underline [&.active]:text-yellow-700 dark:[&.active]:text-white underline-offset-4',
-        '[&.active]:hover:text-zinc-600 dark:[&.active]:hover:text-yellow-300',
+        'text-zinc-800 hover:text-yellow-500 dark:text-yellow-100 hover:dark:text-yellow-300',
+        '[&.active]:text-yellow-600 dark:[&.active]:text-yellow-400',
+        '[&.active]:hover:text-yellow-500 dark:[&.active]:hover:text-yellow-300',
       ),
       gray: 'text-black/50 hover:text-black/60 dark:text-white/50 dark:hover:text-white/40',
     },
