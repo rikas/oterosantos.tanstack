@@ -4,7 +4,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools';
 import { useEffect } from 'react';
 
 import appCss from '../styles.css?url';
-import { Navbar, ThemeProvider } from '@/components/layout';
+import { Footer, Navbar, ThemeProvider } from '@/components/layout';
 import { getThemeServerFn, themeInitScript } from '@/lib/theme';
 
 export const Route = createRootRoute({
@@ -16,6 +16,10 @@ export const Route = createRootRoute({
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
+      },
+      {
+        name: 'description',
+        content: 'A personal website by Ricardo Otero.',
       },
       {
         title: 'Ricardo Otero',
@@ -69,10 +73,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             <div className="bg-white dark:bg-dark-800 flex flex-row max-w-5xl mx-auto shadow-md">
               {children}
             </div>
-
-            <footer className="max-w-5xl pb-5 mx-auto pl-10 py-3">
-              <small className="text-zinc-400">&copy; 2026 Ricardo Otero</small>
-            </footer>
+            <Footer />
           </div>
         </ThemeProvider>
 
