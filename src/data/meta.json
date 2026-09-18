@@ -1,0 +1,54 @@
+[
+  {
+    "name": "description",
+    "content": "A personal website by Ricardo Otero."
+  },
+  {
+    "property": "og:title",
+    "content": "Ricardo Otero - Software Engineer"
+  },
+  {
+    "property": "og:type",
+    "content": "website"
+  },
+  {
+    "property": "og:description",
+    "content": "Software engineer with a passion for building web applications. Specialist in Ruby on Rails, Typescript and exploring new technologies."
+  },
+  {
+    "property": "og:url",
+    "content": "https://www.oterosantos.com/"
+  },
+  {
+    "property": "og:image:alt",
+    "content": "Ricardo Otero - Software Engineer"
+  },
+  {
+    "property": "og:image",
+    "content": "https://www.oterosantos.com/ricardo.jpg"
+  },
+  {
+    "name": "twitter:card",
+    "content": "summary_large_image"
+  },
+  {
+    "name": "twitter:url",
+    "content": "https://www.oterosantos.com/"
+  },
+  {
+    "name": "twitter:title",
+    "content": "Ricardo Otero - Software Engineer"
+  },
+  {
+    "name": "twitter:description",
+    "content": "Software engineer with a passion for building web applications. Specialist in Ruby on Rails, Typescript and exploring new technologies."
+  },
+  {
+    "name": "twitter:image",
+    "content": "https://www.oterosantos.com/ricardo.jpg"
+  },
+  {
+    "name": "author",
+    "content": "Ricardo Otero"
+  }
+]

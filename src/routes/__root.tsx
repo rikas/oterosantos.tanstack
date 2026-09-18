@@ -7,6 +7,8 @@ import appCss from '../styles.css?url';
 import { Footer, Navbar, ThemeProvider } from '@/components/layout';
 import { getThemeServerFn, themeInitScript } from '@/lib/theme';
 
+import metaTags from '@/data/meta.json';
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -18,12 +20,9 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        name: 'description',
-        content: 'A personal website by Ricardo Otero.',
-      },
-      {
         title: 'Ricardo Otero',
       },
+      ...metaTags,
     ],
     links: [
       {
@@ -59,6 +58,23 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en" className={resolvedTheme} suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script type="application/ld+json">
+          {JSON.stringify(
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Ricardo Otero',
+              url: 'https://www.oterosantos.com/',
+              sameAs: [
+                'https://github.com/rikas',
+                'https://www.linkedin.com/in/oterosantos',
+                'https://twitter.com/rikas',
+              ],
+            },
+            null,
+            2,
+          )}
+        </script>
       </head>
 
       <body className="font-wotfard overflow-auto dark:bg-dark-900">
